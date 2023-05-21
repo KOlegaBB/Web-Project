@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./common/Header";
+import Footer from "./common/Footer";
+import {Outlet} from "react-router";
+import {Auth0Provider} from "@auth0/auth0-react";
+import NavToolbar from "./common/NavToolbar";
+import {CartProvider} from "react-use-cart";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App(props) {
+    return <CartProvider>
+        <Auth0Provider
+            domain="dev-lhgqmxqs3ykfipza.us.auth0.com"
+            clientId="WOXt9nupQZD7oteHtE91ENumt8swhIfn"
+            authorizationParams={{
+                redirect_uri: window.location.origin
+            }}>
+            <Header/>
+            <NavToolbar values={[
+                {name: "Пропозиції", url: "/items"},
+                {name: "Акції", url: "/"},
+                {name: "Про нас", url: "/about"}
+            ]}/>
+            <Outlet/>
+            <Footer/>
+        </Auth0Provider>
+    </CartProvider>;
 }
-
-export default App;

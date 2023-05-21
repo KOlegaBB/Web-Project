@@ -1,0 +1,52 @@
+{
+  "items": [
+    {
+      "src": "/assets/logo.png",
+      "id": 1,
+      "name": "Труна бордова",
+      "price": 4000.50
+    },
+    {
+      "src": "/assets/logo.png",
+      "id": 2,
+      "name": "Труна бордова",
+      "price": 4000.50
+    },
+    {
+      "src": "/assets/logo.png",
+      "id": 3,
+      "name": "Труна бордова",
+      "price": 4000.50
+    },
+    {
+      "src": "/assets/sing-in.png",
+      "id": 4,
+      "name": "Труна бордова",
+      "price": 4000.50
+    },
+    {
+      "src": "/assets/sing-in.png",
+      "id": 5,
+      "name": "Труна бордова",
+      "price": 4000.50
+    },
+    {
+      "src": "/assets/tomb.jpeg",
+      "id": 6,
+      "name": "Труна бордова",
+      "price": 4000.50
+    },
+    {
+      "src": "/assets/bin-icon.png",
+      "id": 7,
+      "name": "Труна бордова",
+      "price": 4000.50
+    },
+    {
+      "src": "/assets/bin-icon.png",
+      "id": 8,
+      "name": "Труна бордова",
+      "price": 4000.50
+    }
+  ]
+}
