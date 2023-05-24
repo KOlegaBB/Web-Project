@@ -1,0 +1,38 @@
+.item-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #252525;
+    width: 90%;
+    border-radius: 30px;
+    justify-content: space-between;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.item-img {
+    height: 300px;
+    border-radius: 30px;
+}
+
+.item-info {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.item-text {
+    color: white;
+    text-align: left;
+    font-size: 20px;
+}
+
+.item-name {
+    width: 50%;
+}
+
+.item-price {
+    padding-bottom: 40px;
+}

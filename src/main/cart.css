@@ -1,0 +1,78 @@
+h1 {
+    color: white;
+    margin-top: 30px;
+}
+
+.empty-cart {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Kurale', sans-serif;
+    align-items: center;
+}
+
+.empty {
+    font-size: 36px;
+    color: white;
+    margin: 32.5vh 0;
+}
+
+.cart {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.cart-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.order {
+    display: flex;
+    flex-direction: column;
+}
+
+.order-label {
+    display: block;
+    color: white;
+    font-size: 20px;
+}
+
+.order-data {
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.order-select {
+    display: block;
+    border: black;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.order-input {
+    display: block;
+    border: black;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.error {
+    border: red;
+    background-color: red;
+}
+
+.order-submit {
+    margin: 20px 0;
+    padding: 10px 10px;
+    background-color: black;
+    color: white;
+    font-family: 'Kurale', sans-serif;
+    font-size: 20px;
+    border-radius: 10px;
+}

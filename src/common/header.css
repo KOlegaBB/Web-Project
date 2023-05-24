@@ -24,7 +24,7 @@ body {
 }
 
 .sing-in-button {
-    font-size: medium;
+    font-size: 20px;
     background-color: #252525;
     border: none;
     border-radius: 10px;
@@ -32,6 +32,7 @@ body {
     height: 40px;
     color: white;
     font-family: 'Kurale', sans-serif;
+    cursor: pointer;
 }
 
 .logo {
@@ -40,6 +41,7 @@ body {
     gap: 20px;
     padding: 10px;
     justify-content: space-around;
+    cursor: pointer;
 }
 
 .logo-text {
@@ -54,4 +56,9 @@ body {
 
 .sing-in-icon {
     height: 100%;
+}
+
+.bin-text {
+    text-decoration: none;
+    color: white;
 }

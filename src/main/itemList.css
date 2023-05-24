@@ -1,0 +1,100 @@
+.catalog {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5%;
+    margin: 20px 0;
+}
+
+h1 {
+    color: white;
+    margin: 0 0 0 10px;
+}
+
+.items-sorting {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+    width: 20%;
+}
+
+.head-name {
+    font-family: 'Kurale', sans-serif;
+    color: white;
+    font-size: 24px;
+    margin-left: 10px;
+}
+
+
+.value-input {
+    background-color: #333333;
+    color: white;
+    margin-left: 25px;
+}
+
+.items {
+    width: 80%;
+    display: grid;
+    grid-column: 3;
+    grid-template-columns: 30% 30% 30%;
+    gap: 20px;
+}
+
+.item-list-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #252525;
+    border-radius: 30px;
+}
+
+.item-list-img {
+    width: 90%;
+    height: 260px;
+    overflow: hidden;
+    margin-top: 20px;
+    border-radius: 30px;
+}
+
+.item-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.item-text {
+    color: white;
+    text-align: left;
+    font-size: 20px;
+    width: 50%;
+}
+
+.item-buy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item-price {
+    color: white;
+    font-size: 20px;
+    margin: 0;
+}
+
+.buy-button {
+    background-color: black;
+    border-style: none;
+    color: white;
+    font-family: 'Kurale', sans-serif;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: -35px;
+}

@@ -1,6 +1,6 @@
 import './footer.css'
 
-export default function Footer(props) {
+export default function Footer() {
     return <div className={'footer'}>
         <p className={'text'}>
             <span>Бюро ритуальних послуг</span> <br/>

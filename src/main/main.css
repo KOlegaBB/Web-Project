@@ -1,0 +1,40 @@
+.sale {
+    width: 70%;
+    border-radius: 87px;
+    margin-top: 40px;
+}
+
+
+.main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Kurale', sans-serif;
+}
+
+
+.tags {
+    display: flex;
+    background: #252525;
+    border-radius: 20px;
+    margin-top: 40px;
+    gap: 90px;
+    padding: 20px 50px;
+}
+
+.tag-button {
+    font-size: 26px;
+    text-align: center;
+    color: white;
+    background-color: #252525;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: 'Kurale', sans-serif;
+    border-style: none;
+}
+
+.carousel {
+    width: 80%;
+    padding-bottom: 50px;
+    padding-top: 30px;
+}
