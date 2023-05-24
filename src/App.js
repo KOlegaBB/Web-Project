@@ -1,16 +1,16 @@
-import Header from './common/Header';
-import Footer from './common/Footer';
-import {Outlet} from 'react-router';
-import NavToolbar from './common/NavToolbar';
-import {useAuth0} from '@auth0/auth0-react';
-import {useCart} from 'react-use-cart';
-import {useEffect} from 'react';
+import Header from './common/Header'
+import Footer from './common/Footer'
+import {Outlet} from 'react-router'
+import NavToolbar from './common/NavToolbar'
+import {useAuth0} from '@auth0/auth0-react'
+import {useCart} from 'react-use-cart'
+import {useEffect} from 'react'
 
 export default function App() {
-    const {user} = useAuth0();
-    const {setItems} = useCart();
+    const {user} = useAuth0()
+    const {setItems} = useCart()
     useEffect(() => {
-        if (user === undefined) return;
+        if (user === undefined) return
         loadCart(user.sub, setItems)
     }, [user])
     return <>
@@ -20,7 +20,7 @@ export default function App() {
         }, {text: 'Про нас', url: '/about'}]}/>
         <Outlet/>
         <Footer/>
-    </>;
+    </>
 }
 
 function loadCart(userSub, setItems) {
@@ -28,7 +28,7 @@ function loadCart(userSub, setItems) {
         fetch(`http://localhost:3030/users/${userId}`)
             .then(response => response.json())
             .then(json => {
-                const cart = json.cart;
+                const cart = json.cart
                 const items = Object.keys(cart)
                 if (items.length === 0) return
                 let newRequest = `http://localhost:3030/items?`
@@ -42,7 +42,6 @@ function loadCart(userSub, setItems) {
                                 quantity: Number(cart[`${jsonResponse[i].id}`])
                             }
                         }
-                        // TODO:
                         setItems(jsonResponse)
                     })
             })

@@ -1,8 +1,8 @@
-import {useParams} from 'react-router';
-import {useCart} from 'react-use-cart';
-import {useEffect, useState} from 'react';
-import './item.css';
-import CarouselWrapper from './CarouselWrapper';
+import {useParams} from 'react-router'
+import {useCart} from 'react-use-cart'
+import {useEffect, useState} from 'react'
+import './item.css'
+import CarouselWrapper from './CarouselWrapper'
 
 const publicURL = process.env.PUBLIC_URL
 
@@ -26,7 +26,7 @@ export default function Item() {
     }, [id, setItem])
     const addToCart = () => {
         if (!inCart(id)) {
-            addItem(item);
+            addItem(item)
         } else {
             updateItemQuantity(id, getItem(id).quantity + 1)
         }

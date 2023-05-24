@@ -1,9 +1,9 @@
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import './itemCard.css'
 import './main.css'
-import {useState} from 'react';
-import CarouselWrapper from './CarouselWrapper';
-import {useNavigate} from "react-router-dom";
+import {useState} from 'react'
+import CarouselWrapper from './CarouselWrapper'
+import {useNavigate} from "react-router-dom"
 
 const publicURL = process.env.PUBLIC_URL
 

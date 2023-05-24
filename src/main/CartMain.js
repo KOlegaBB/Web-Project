@@ -1,12 +1,12 @@
-import {useCart} from 'react-use-cart';
+import {useCart} from 'react-use-cart'
 import {isValidPhoneNumber} from 'react-phone-number-input'
-import {useForm} from 'react-hook-form';
+import {useForm} from 'react-hook-form'
 import './cart.css'
-import {useAuth0} from '@auth0/auth0-react';
-import {useNavigate} from 'react-router-dom';
-import {useEffect} from 'react';
+import {useAuth0} from '@auth0/auth0-react'
+import {useNavigate} from 'react-router-dom'
+import {useEffect} from 'react'
 
-const emailValidator = require('email-validator');
+const emailValidator = require('email-validator')
 const regions = ['Одеська область',
     'Дніпропетровська область',
     'Чернігівська область',
@@ -43,7 +43,7 @@ export default function CartMain() {
 
 function Cart() {
     const {setItems, items, emptyCart, cartTotal} = useCart()
-    const {isAuthenticated, user} = useAuth0();
+    const {isAuthenticated, user} = useAuth0()
     const navigate = useNavigate()
     const placeOrder = data => {
         let cartItems = {}
@@ -66,20 +66,22 @@ function Cart() {
     }
     return <div className={'cart'}>
         <h1>Оформити замовлення</h1>
+        <div className={"horizontal-line"}></div>
         <div className={'cart-main'}>
             <OrderInformation
                 placeOrder={placeOrder}/>
+            <div className={"line"}></div>
             <div className={'cart-order'}>
                 <CartContent items={items} cartTotal={cartTotal}/>
-                <button onClick={() => setItems([])}>Clear</button>
+                <button className={"clear"} onClick={() => setItems([])}>Очистити кошик</button>
             </div>
         </div>
     </div>
 }
 
 function OrderInformation(props) {
-    const {isAuthenticated, user} = useAuth0();
-    const {register, handleSubmit, formState: {errors}, reset} = useForm();
+    const {isAuthenticated, user} = useAuth0()
+    const {register, handleSubmit, formState: {errors}, reset} = useForm()
     useEffect(() => {
         if (!isAuthenticated) return
         fetch(`http://localhost:3030/users/${user.sub}`)
@@ -147,23 +149,34 @@ function CartContent(props) {
             key={item.id}
             item={item}
         />)}
-        <span>{props.cartTotal.toFixed(2)}грн</span>
+        <div className={"total-price"}>
+        <span className={"total"}>Загальна вартість: </span>
+        <span className={"total"}>{props.cartTotal.toFixed(2)}грн</span>
+        </div>
     </div>
 }
 
 function CartItem(props) {
     const {name, quantity, price, id} = props.item
     const {updateItemQuantity, getItem} = useCart()
-    return <>
+    return <div className={"cart-elem"}>
         <br/>
-        {id}:
-        {name} -
+        <span>{name}</span>
+        <div className={"change-price"}>
         <button
-            onClick={() => updateItemQuantity(id, getItem(id).quantity - 1)}>-</button>
+            className={"price"}
+            onClick={() =>
+                updateItemQuantity(id, getItem(id).quantity - 1)}>
+            -
+        </button>
         {quantity}
         <button
-            onClick={() => updateItemQuantity(id, getItem(id).quantity + 1)}>+
+            className={"price"}
+            onClick={() =>
+                updateItemQuantity(id, getItem(id).quantity + 1)}>
+            +
         </button>
-        x {price.toFixed(2)}
-    </>
+        </div>
+        <span>x {price.toFixed(2)}</span>
+    </div>
 }

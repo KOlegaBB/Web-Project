@@ -494,6 +494,19 @@
         "5": 100
       },
       "id": 1
+    },
+    {
+      "region": "Львівська область",
+      "city": "Boryslaw",
+      "postOffice": "2",
+      "firstName": "Вікторія",
+      "lastName": "Кочеркевич",
+      "email": "kocherkevuch@gmail.com",
+      "phone": "+380951028211",
+      "items": {
+        "1": 1
+      },
+      "id": 2
     }
   ]
 }

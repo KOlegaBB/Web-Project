@@ -1,6 +1,6 @@
-import {Carousel} from 'react-responsive-carousel';
-import {useEffect, useState} from 'react';
-import {useNavigate} from 'react-router-dom';
+import {Carousel} from 'react-responsive-carousel'
+import {useEffect, useState} from 'react'
+import {useNavigate} from 'react-router-dom'
 
 const publicURL = process.env.PUBLIC_URL
 

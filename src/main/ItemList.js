@@ -1,6 +1,6 @@
-import {useLocation, useNavigate} from 'react-router-dom';
-import MultiRangeSlider from 'multi-range-slider-react';
-import {useEffect, useState} from 'react';
+import {useLocation, useNavigate} from 'react-router-dom'
+import MultiRangeSlider from 'multi-range-slider-react'
+import {useEffect, useState} from 'react'
 import './itemList.css'
 
 const publicURL = process.env.PUBLIC_URL
@@ -15,8 +15,8 @@ export default function ItemList() {
         let rawURL = `http://localhost:3030/items?` +
             `price_gte=${priceBoundary[0]}&` +
             `price_lte=${priceBoundary[1]}`
-        for (const tag of tags) rawURL = rawURL + `&tag=${tag}`
-        for (const type of types) rawURL = rawURL + `&type=${type}`
+        tags.map(tag => rawURL = rawURL + `&tag=${tag}`)
+        types.map(type => rawURL = rawURL + `&type=${type}`)
         fetch(rawURL)
             .then((result) => result.json())
             .then((json) => setItems(json))
@@ -56,7 +56,12 @@ function SideBar(props) {
             maxValue={props.boundary[1]}
             ruler={false}
             stepOnly={false}
-            onChange={result => props.setBoundary([result.minValue, result.maxValue])}/>
+            barInnerColor={'white'}
+            barLeftColor={'#252525'}
+            barRightColor={'#252525'}
+            style = {{color: "white"}}
+            onChange={result =>
+                props.setBoundary([result.minValue, result.maxValue])}/>
     </aside>
 }
 
